@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vansh Agarwal | Portfolio</title>
+  <meta name="theme-color" content="#2748d8">
+  <meta name="description" content="Portfolio of Vansh Agarwal, B.Tech CSE student interested in AI, machine learning and web development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#home" class="brand">Vansh Agarwal</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Switch to dark mode">Dark mode</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="kicker">B.Tech CSE student, Galgotias University</p>
+        <h1>I turn small datasets into working predictions.</h1>
+        <p class="lead">Hi, I’m Vansh. I’m learning machine learning and web development, and I build beginner-friendly projects in Python and JavaScript.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <svg class="plot" viewBox="0 0 320 240" role="img" aria-label="Scatter plot of study hours against exam score with a rising regression line">
+        <line class="axis" x1="30" y1="210" x2="305" y2="210"/>
+        <line class="axis" x1="30" y1="15" x2="30" y2="210"/>
+        <g class="dots">
+          <circle cx="55" cy="190" r="5"/><circle cx="80" cy="176" r="5"/><circle cx="105" cy="172" r="5"/>
+          <circle cx="130" cy="150" r="5"/><circle cx="155" cy="138" r="5"/><circle cx="180" cy="120" r="5"/>
+          <circle cx="205" cy="108" r="5"/><circle cx="230" cy="86" r="5"/><circle cx="255" cy="70" r="5"/>
+          <circle cx="280" cy="48" r="5"/>
+        </g>
+        <line class="fit" x1="45" y1="196" x2="290" y2="42"/>
+        <text x="167" y="232" text-anchor="middle" class="axis-label">Hours studied</text>
+      </svg>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>I’m a Computer Science and Engineering student at Galgotias University (2023 to 2027) with a CGPA of 7.5. I’m interested in machine learning, software development and problem-solving, and I learn best by building small projects and fixing what breaks.</p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd>Python, Java, JavaScript</dd></div>
+        <div><dt>Frontend</dt><dd>React.js, HTML, CSS, Tailwind CSS</dd></div>
+        <div><dt>Database</dt><dd>MySQL</dd></div>
+        <div><dt>Concepts</dt><dd>Data Structures, Algorithms</dd></div>
+        <div><dt>Tools</dt><dd>Git, GitHub, VS Code</dd></div>
+      </dl>
+      <h3>Certificates</h3>
+      <ul class="certs">
+        <li>Java For Beginners, Guvi</li>
+        <li>DBMS with Oracle, Oracle</li>
+        <li>Python For Beginners, Guvi</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <article class="project">
+        <h3>Student Score Predictor</h3>
+        <p class="stack">Python, pandas, scikit-learn, Matplotlib</p>
+        <p>Predicts an exam score from the hours studied using Linear Regression. You enter an exam name and your hours, either as one total or as several days, and it returns a predicted score and plots it on the regression line.</p>
+        <a href="https://github.com/Vansh-Ag-ML/Student-Score-Predictor" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+      <article class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p class="stack">HTML, CSS, JavaScript</p>
+        <p>This site: a responsive layout built with Flexbox and Grid, smooth scrolling between sections, a dark mode toggle and a contact form checked with JavaScript.</p>
+        <a href="https://github.com/Vansh-Ag-ML" target="_blank" rel="noopener">View my GitHub</a>
+      </article>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <ul class="contact-info">
+        <li>Email: <a href="mailto:vanshagarwal2121@gmail.com">vanshagarwal2121@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Vansh-Ag-ML" target="_blank" rel="noopener">github.com/Vansh-Ag-ML</a></li>
+        <li>Location: Greater Noida, India</li>
+      </ul>
+      <p>Prefer a form? Fill it in below and I will get your message.</p>
+      <form id="contactForm" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name">
+        <p class="error" id="nameErr" role="alert"></p>
+
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" autocomplete="email">
+        <p class="error" id="emailErr" role="alert"></p>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        <p class="error" id="messageErr" role="alert"></p>
+
+        <button class="btn primary" type="submit">Send message</button>
+        <p class="status" id="formStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Vansh Agarwal</p>
+    <p><a href="https://github.com/Vansh-Ag-ML" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <noscript><p class="noscript">JavaScript is off, so the dark mode and contact form are unavailable. You can still email me directly.</p></noscript>
+  <script src="script.js" defer></script>
+</body>
+</html>
